@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko"> <!-- ko로 바꿔주기 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../JS-TODO-CSS/style.css">
+    
+</head>
+<body>
+    <div class="wrapper"> <!-- 모든 것을 감싸는 div 태그 -->
+        <header>
+            <h1>Todo List</h1>
+        </header>
+        <section>
+            <div class="input-container">
+                <input type="text" class="input-text">
+                <button class="add-button">추가</button>
+            </div>
+            <div>
+                <div class="list-container">
+                    <ul class="list">
+                        <!-- li로 3부분을 나눌 수 있음. 좋아요 부분, 텍스트 부분, 처리했다&삭제하겠다(manage 부분) -->
+                       <!--  <li>
+                            <span class="like">
+                                <i class="material-icons favorite">favorite_border</i>
+                            </span>
+                            <span class="item">자바스크립트 todo</span>
+                            <span class="manage">
+                                <i class="material-icons check">check</i>
+                                <i class="material-icons clear">clear</i>
+                            </span>
+                        </li> --> <!-- shift + alt + a로 html 한번에 주석/해제: https://ssimplay.tistory.com/566 -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="../JS-TODO-JS/main.js"></script>
+</body>
+</html>

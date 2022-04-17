@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+.wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex; /*flex를 줘서 정렬을 할 것. flex가 기본적으로는 가로 정렬인데, 세로로 갈 수 있도록 flex-direction: column으로 변경*/
+    flex-direction: column;
+}
+
+/*가운데로 위치시킬 수 있지만 각각의 요소에 넓이를 줌으로써 위치를 잡아볼 것*/
+header {
+    color: #fff;
+    /*배경색은 약간의 그라데이션이 들어가 있음.*/
+    background: linear-gradient(5deg, #108dc7,#ef8e38); /*방향이 대각선이길 원하면 dgree로 지정 가능. toleft, totop 이런식으로 줄 수도 있지만, 이렇게 수치로 조정도 가능*/
+    padding: 1em; /*여백을 16px정도 넣어줌*/
+    display: flex; /*텍스트는 flex를 줘서 글자를 가운데로 보내고 */
+    align-items: center; /*위아래로 가운데로 올 수 있도록 center로 준다.*/
+    justify-content: center; /*가운데로 위치할 수 있게 해줌. */
+}
+
+.input-container {
+    width: 100%;
+    height: 30px;
+    /*flex를 주기 전에는 위아래로 여백이 있었는데, flex를 주고 난 후 위아래로 stretch됨.*/
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+.input-text {
+    width : 90%;
+    padding: 0.3em;
+    border : none; /*불필요한 보더가 안생기게 함.*/
+}
+/*버튼이 오른쪽에 딱 달라 붙을 수 있도록 나머지 10%의 너비를 주자*/
+.add-button {
+    width: 10%;
+    border: none;
+    background: #28324e;
+    color : #fff;
+    outline: none;/* 아웃라인을 none해서 클릭을 해도 변화가 없게 함*/
+}
+.add-button:hover { /*add-button에 줘도 되고 hover에 줘도 됨*/
+    cursor: pointer;
+    background: #333;
+}
+/*리스트 디자인*/
+.list {
+    list-style: none;
+}
+.list li {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding: 1em;
+    align-items: center; /* 위아래로 정렬이 될 수 있도록=위아래 기준으로 정중앙에 위치할 수 있도록  */
+}
+/*li 요소들의 비율이 1: 8: 1 정도를 가지고 있음*/
+.like {
+    flex:  1;
+}
+.item {
+    flex: 8;
+}
+.manage {
+    flex: 1;
+    /*아래 2개 설정으로 체크랑 삭제 기능이 나란히 정렬되게 함*/
+    display: flex;
+    justify-content: space-between;
+}
+
+/*이제 버튼들의 색깔만 추가함*/
+/*i 태그의 폰트 색상을 바꿈으로써 아이콘의 색상을 바꿀 수 있다*/
+.like i {
+    color: salmon;
+}
+.check {
+    color: #38ef7d;
+} 
+.clear {
+    color: salmon;
+}
+/*check 버튼을 눌렀을때 가운데에 줄이 그어지게 하기 위해서 클래스를 줬다가 뺏다가 할 것임*/
+/*즉 버튼을 누르면 done이라는 클래스가 부여된 .item은 text-decoration을 line-through로 둔다 */
+.done .item {
+    text-decoration: line-through
+    ;
+}
+.done .check {
+    visibility: hidden;/*check 버튼은 더이상 보여지지 않게 함*/
+    /*display:none을 주면 태그 자체가 html에서 사라져서 x 표시가 앞으로 땡겨져 나옴.*/
+}
