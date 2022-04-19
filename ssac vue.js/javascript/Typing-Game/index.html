@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="bg-dark text-white"> <!-- 배경은 어둡게, 글자는 하얗게 -->
+    <header class="bg-secondary text-center p-3 mb-5"> <!-- 약간의 회색. 글자 가운데, 패딩을 3정도 줌, 마진바텀을 5정도 줌 -->
+        <h1>Typing Master</h1> <!-- 글자 가운데로 오고, 위아래 공간이 좀 있어야 할 거 같음. header에서 줌-->
+    </header>
+    <div class="container text-center">
+        <div class="row">
+            <div calss="col-md-6 mx-auto">
+                <p class="read">주어진 단어를 <span class="text-success">5</span>초 안에 타이핑 하기</p> <!-- text-success는 약간 녹색 -->
+                <h2 class="display-2 mb-5" id="current-word">Start</h2> <!-- 실질적인 단어가 들어가는 부분. 글자크기를 2정도 늘린다. 자바스크립트를 입히기 위해 id 부여 -->
+                <input type="text" id="word-input" class="form-control form-control-lg" placeholder="start typing..."> <!-- palceholder는 문자 입력전 안내 문구 -->
+                <h4 class="mt-3" id="message"></h4> <!-- 게임 오버를 알려주기 위한 -->
+            </div> <!-- middle 사이즈일때 6정도의 너비를 가지고, 마진 우측은 자동으로 가질 수 있게 구현 -->
+        </div> <!-- 하나의 줄을 생성할 것. -->   
+        <div class="row"> <!-- 시간과 점수를 알려주는 창.  -->
+            <div class="col-12 col-xl-6"> <!--크기가 작을때는 위아래로 배치가 되도록 브레이크 포인트를 사용해서 만들어볼 것  -->
+                <h3>Time left: <span id="time">0</span></h3>
+            </div>
+            <div class="col-12 col-xl-6">
+                <h3>Score: <span id="score">0</span></h3>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col"> <!--부트스트랩의 카드를 사용해볼 것-->
+                <div class="card card-body bg-secondary text-white">
+                    <h5>안내방법</h5>
+                    <p>각 단어를 주어진 시간안에 타이핑하고, 다시 시작하려면 주어진 단어를 입력하세요.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-3">
+                    <!-- 가장 작을 땐 12를 default로 갖게 함. -->
+                    <button class="col-12 col-sm-3 btn btn-primary">초급</button>
+                    <button class="col-12 col-sm-3 btn btn-secondary">중급</button>
+                    <button class="col-12 col-sm-3 btn btn-success">상급</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>    
+</body>
+</html>
