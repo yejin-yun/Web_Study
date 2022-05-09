@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc 함수</title>
+    <style>
+        .message {
+            display: flex; /* flex box가 다루기 좋음 */
+            justify-content: space-around; /* 좌우로 여백을 두고 펼쳐지게 됨 */
+            align-items: center;
+            height: 100px;
+            /* 100px 안에서 수직 가운데 정렬. 그리고 justify-content에 의해서 좌우로 여백두고 펼쳐짐 */
+            padding: 0.5em;
+            border: 1px solid #000;
+            font-size: 1.5em;
+        }
+        .message__text {
+            width: calc(100% - 100px);
+            height: 100%;
+            border: none;
+            resize: none;
+        }
+        .message__text:focus{outline: none;} /*마우스 갖다 놓으면 아웃라인 생기는 거 없앰*/
+        .message__send {
+            width: 100px;
+            height: 100%;
+            border-radius: 8px;
+            background-color: #9ec4cf;
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <textarea class="message__text"></textarea>
+        <button class="message__send">전송</button>
+    </div>
+</body>
+</html>

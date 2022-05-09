@@ -1,0 +1,49 @@
+.nav { /* 헤더와 마찬가지로 왼쪽에 붙어있는 상태로 고정이 될 것 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10; /*헤더와 겹치면 헤더의 z-index가 20이어서 헤더가 우선적으로 보인다*/
+}
+.nav__wrapper { /* 얘가 네비게이션의 실제 콘텐츠를 담당하는 만큼 크기 지정을 해줄 것 */
+    min-width: 200px;
+    min-height: 100vh; /*화면 높이 만큼은 높이를 차지하고 있어야 한다.*/
+    background-color: #f8f8f8;
+    padding: 80px 0 0 0; /*top, right, bottom, left(시계방향). 네비게이션 요소들이 헤더에 가려져 있는 것을 보이게 함. 헤더에 가려져 있는만큼 크기를 줌*/
+    list-style: none; /* 혹시나 리스트 스타일 추가되는 것 방지 */
+}
+.nav__wrapper li {
+    display: flex; /*1차원적인 배열*/
+    padding: 10px 10px; /*마음대로 주심*/
+}
+/*의사 클래스 추가*/
+.nav__wrapper li:hover {
+    background-color: #eaeaea;
+}
+.nav__icon {
+    border: none; /*편의상 아이콘 표시 영역을 버튼으로 해서 border를 none으로 해주는 것. 그리고 그래서 다른 아이콘들과 스타일도 거의 비슷하다 */
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+.nav__menu {
+    margin: 0 0 0 8px;
+    font-size: 1.2rem;
+    border: none;
+    background-color: transparent;
+}
+/* 800px이 되면 네비게이션의 텍스트가 사라짐 */
+@media screen and (max-width: 800px) {
+    .nav__menu {
+        display: none;
+    }
+    /* 빈공간도 사라져야 하기 때문에 min-width가 200인 nav__wrapper를 수정 */
+    .nav__wrapper {
+        min-width: 0; /*최소값이 없어지므로 콘텐츠 크기 만큼만 공간을 차지하게 됨*/
+    }
+}
+
+/* 모바일이니까 400px 보다 작으면 nav__wrapper를 아예 안보이게 함 */
+@media screen and (max-width: 400px) { /*가장 큰게 400px*/
+    .nav__wrapper {
+        display: none;
+    }
+}

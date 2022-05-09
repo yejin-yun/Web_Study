@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/navigation.css" rel="stylesheet">
+    <link href="css/thumbs.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__wrapper">
+            <h1 class="header__start">
+                <button class="header__hamburger">&#9776;</button>
+                <span class="header__title">YoonTube</span>
+            </h1>
+            <div class="header__center">
+                <form class="header__form" onsubmit="return false;">
+                    <input class="header__input--text" placeholder="보고싶은 동영상">
+                    <button class="header__input--button">검색</button>
+                </form>
+            </div>
+            <div class="header__end">
+                <button class="header__search">&#128269;</button>
+                <div class="header__profile"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- nav 라는 시맨틱 태그를 이용해서 내비게이션에 해당하는 마크업을 딱 묶어둠 -->
+    <!-- 내가 어디로 갈 수 있는지 안내해주는 역할을 해서 내비게이션 바, 내비게이션 메뉴, 내비게이션이라고 불림 -->
+    <nav class="nav">
+        <ul class="nav__wrapper">
+            <li>
+                <!-- 버튼 태그를 사용하는 이유는 단지 다루기 쉬워서일뿐 -->
+                <button class="nav__icon">&#9829;</button>
+                <button class="nav__menu">메뉴 항목</button>
+            </li>
+            <li>
+                <button class="nav__icon">&#9829;</button>
+                <button class="nav__menu">메뉴 항목</button>
+            </li>
+            <li>
+                <button class="nav__icon">&#9829;</button>
+                <button class="nav__menu">메뉴 항목</button>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="thumbs">
+        <div class="thumbs__wrapper">
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info"> <!-- 썸네일에 대한 정보 -->
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+          <div class="thumbs__item">
+            <img class="thumbs__thumbnail" src="./imgs/thumbnail.jpeg">
+            <div class="thumbs__info">
+              <div class="thumbs__profile"></div>
+              <div class="thumbs__text">
+                <h3 class="thumbs__text--title">영상 제목</h3>
+                <p class="thumbs__text--owner">게시자</p>
+                <p class="thumbs__text--anal">조회수 100회 &#183; 1시간 전</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

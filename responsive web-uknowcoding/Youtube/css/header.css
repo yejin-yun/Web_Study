@@ -1,0 +1,96 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0; /*여기까지 하면 헤더는 위에 붙어서 안 움직이는 상태가 된다. 스크롤이 길어졌을 때 헤더가 보이지 않는 현상을 방지하기 위해서 고정을 시켜둠*/
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 3px #000;/* 영역을 잘 보여주기 위해서 box-shadow를 할 것. 요소의 테두리를 감싼 그림자 효과를 넣는다. */
+    z-index: 20; /*다른 요소랑 겹쳤을 때 상대적으로 높은 위치에 보이게 만들어줌 */
+}
+.header__wrapper { /*얘가 실제 헤더를 담당하고 있어서 얘한테도 스타일을 정확하게 주어야 한다. */
+    height: 60px; /* 고정된 높이를 통해서 헤더를 가져감 */
+    /* 이 안에서 start, center, end 배치를 좌우로 시켜줄 것 */
+    display: flex; /* flex display가 지정된 영역에서는 요소가 1차원으로 정렬된다. */
+    align-items: center; /* 세로축에서의 정렬 방법 */    
+    justify-content: space-between; /* 가로축에서의 정렬 방법 */
+    padding: 0 16px; /* 위아래 좌우 */
+}
+.header__start {
+    height: 40px; /* 현재 헤더가 60px이어서 이 수직의 가운데 배치되는 start, center, end의 높이를 균일하게 맞추기 위해 선생님이 그냥 정한 값  */
+    line-height: 40px; /* 줄높이: https://mygumi.tistory.com/366 */
+}
+.header__hamburger{
+    border: none;
+    background-color: transparent; /*투명하게*/
+    font-size: 1.5rem; /*24px*/
+}
+.header__title {
+    font-size: 1.2rem; /*햄버거 버튼보다는 좀 더 작았으면 함*/
+    margin-left: 6px; 
+}
+.header__center {
+    /* 검색 창이 헤더의 너비를 따라가도록 할 것 */
+    width: 50%;
+   /*background-color: tomato;*/
+}
+.header__form {
+    display: flex; /*인풋창이랑 검색버튼 가로로 붙이기 위해서 */
+    max-width: 100%; /*header_center의 크기를 따라가게 됨*/
+}
+.header__input--text {
+    width: calc(100% - 60px); /*width를 버튼 크기빼고 다 차지하게 할 것. 자기가 속한 전체 영역 - 버튼 크기*/
+    /*밑의 코드는 심미적인 것을 위한 코드 */
+    height: 40px;
+    padding: 0 6px;
+    border: 1px solid #8f8f8f;
+    border-right: none;
+    border-radius: 2px 0 0 2px; /*검색 버튼과 붙어 있는 부분이 매끈해져야 하니까 해당 부분에는 보더 레디어스를 주지 않음 */
+}
+.header__input--button {
+    width: 60px; /*위에서 정함*/
+    /*밑의 코드는 심미적인 것을 위한 코드 */
+    height: 40px;
+    padding: 0 6px;
+    border: 1px solid #8f8f8f;
+    border-left: none;
+    border-radius: 0 2px 2px 0; /*검색 버튼과 붙어 있는 부분이 매끈해져야 하니까 해당 부분에는 보더 레디어스를 주지 않음 */
+}
+.header__end {
+    display: flex; /* 1차원으로 정렬하고 싶어서 */
+}
+.header__search { /*돋보기*/
+    display: none; /*돋보기는 원래 처음에는 보이지 않아야 함. 화면이 좁아지면 보여야 함. 그래서 기본 스타일상 display가 none이다. */
+    margin-right: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+}
+.header__profile {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #eaeaea;
+    border-radius: 50%; /*동그라미가 됨*/
+    /*background-color: tomato;*/
+    background-image: url(../imgs/1.png);
+    background-size: 40px;/*크기가 너무 크면 background size도 조절해주기. 계속 흰색으로 보였엇는데, 사진이 너무 커서 그랬던 거. 높이랑 너비랑 맞추려고 40px로 하신듯 */
+}
+
+/* 반응은 좁아질때마다 변화를 줄 것 */
+
+/* 800px이 되면 Yoontube라는 로고가 사라지게 한다 */
+@media screen and (max-width: 800px) {
+    .header__title {
+        display: none; /*display:none은 코드 안에는 있어도, 화면에는 없는 요소*/
+    }
+}
+
+/* 400px이 되면 검색창이 돋보기로 대체되게 할 것. */
+@media screen and (max-width: 400px) {
+    .header__center {
+        display: none;
+    }
+    .header__search {
+        /* 미디어 쿼리를 쓰면 여기에 있는 속성만 추가 혹은 수정이 되나봄(궁금해서 돋보기 부분 display 빼고 스타일 다 빼봄). 나머지 다른 속성들은 기본적으로 적용이되고 */
+        display: block; /* block이지만 header__end는 flex 박스를 만들어서 end에서는 1차원 정렬이 됨*/
+    }
+}

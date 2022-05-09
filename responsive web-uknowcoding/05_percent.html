@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가변 레이아웃</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container { /* 고정 레이아웃을 만들어 볼 것 */
+            width: 90%;
+            margin: 0 auto; /* 상하, 좌우 */
+            text-align: center;
+        }
+        .header {
+            width: 100%; /* 부모인 container가 960px일 때 960px 이었으므로 부모 요소를 기준으로 헤더는 100%의 크기를 가지게 된다. */
+            height: 100px; 
+            background-color: tomato;
+        }
+        .main {
+            float: left;
+            width: 67%; /* 960px에서 640px이 몇 퍼센트? 640/960 = 0.666...(66.6666...%) 여기서는 간편하게 67%로 할 것 */
+            height: 300px;
+            padding: 10%; /*padding은 부모의 너비 크기 기준이라 너비가 줄어들면 패딩도 줄어들어서 글자의 위치가 달라지는 것 확인 가능 */
+            background-color: orange;
+        }
+        .aside {
+            float: right;
+            width: 33%; /* 옆의 main이 67%를 차지하므로 얘는 자동으로 33%를 차지함 */
+            height: 300px;
+            background-color: purple;
+        }
+        .footer {
+            clear: both; /*clear: https://aboooks.tistory.com/79*/
+            width: 100%;
+            height: 100px;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">HEADER</div>
+        <div class="main">MAIN</div>
+        <div class="aside">ASIDE</div>
+        <div class="footer">FOOTER</div>
+    </div>
+</body>
+</html>
