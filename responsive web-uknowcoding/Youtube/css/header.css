@@ -71,7 +71,7 @@
     border: 1px solid #eaeaea;
     border-radius: 50%; /*동그라미가 됨*/
     /*background-color: tomato;*/
-    background-image: url(../imgs/1.png);
+    background-image: url(../imgs/1.jpg);
     background-size: 40px;/*크기가 너무 크면 background size도 조절해주기. 계속 흰색으로 보였엇는데, 사진이 너무 커서 그랬던 거. 높이랑 너비랑 맞추려고 40px로 하신듯 */
 }
 

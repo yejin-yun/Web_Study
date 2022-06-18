@@ -22,7 +22,9 @@
     width: 36px;
     height: 36px;
     border-radius: 50%; /*18px 줘도 됨. 36px의 반이어서 그런 듯 */
-    background-color: tomato;
+    /* background-color: tomato; */
+    background-image: url(../imgs/1.jpg);
+    background-size: 36px;
 }
 .thumbs__text { /* 여기는 보기 좋게만 해주면 됨 */ 
     width: calc(100% - 36px); /*프로필 제외*/
